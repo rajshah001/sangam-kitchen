@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import ScrollToTop from './components/ScrollToTop';
 import './styles/globals.css';
 
 // Import the simplified Home page
@@ -34,7 +35,7 @@ function About() {
       <div style={{ background: 'linear-gradient(135deg, rgba(128, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1920")', backgroundSize: 'cover', backgroundPosition: 'center', height: '60vh', display: 'flex', alignItems: 'center', color: '#fff' }}>
         <div className="container" style={{ textAlign: 'center' }}>
           <h1 style={{ fontSize: '3rem', marginBottom: '1rem', color: '#fff' }}>About Sangam Kitchen</h1>
-          <p style={{ fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto' }}>Transforming homes with exceptional interior design and kitchen solutions for over a decade.</p>
+          <p style={{ fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto', color: '#fdfcf0' }}>Transforming homes with exceptional interior design and kitchen solutions for over a decade.</p>
         </div>
       </div>
 
@@ -42,7 +43,7 @@ function About() {
       <div className="container" style={{ padding: '5rem 0' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
           <div>
-            <h2 style={{ color: '#800000', marginBottom: '2rem' }}>Our Story</h2>
+            <h2 style={{ color: '#800000', marginBottom: '2rem', marginTop: '1rem' }}>Our Story</h2>
             <p style={{ fontSize: '1.1rem', lineHeight: '1.7', color: '#666', marginBottom: '1.5rem' }}>
               Established in 2002 by Mr. Mangesh Gujrathi, Sangam Kitchen was born from a vision of excellence in product design and manufacturing. As a tech-savvy engineer with 20+ years of hands-on manufacturing experience, Mr. Gujrathi diversified into kitchen trolleys & railings, creating the Sangam Kitchen brand.
             </p>
@@ -53,7 +54,7 @@ function About() {
               Today, we serve as a one-stop destination for customers across Jalgaon and beyond, offering everything from modular kitchens to appliances, railings, and furniture. Our dedicated team continues to grow our customer base through quality products and exceptional service.
             </p>
           </div>
-          <div>
+      <div>
             <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Our design process" style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '12px', boxShadow: '0 8px 30px rgba(0,0,0,0.2)' }} />
           </div>
         </div>
@@ -239,14 +240,14 @@ function Services() {
       <div style={{ background: 'linear-gradient(135deg, rgba(128, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1920")', backgroundSize: 'cover', backgroundPosition: 'center', height: '60vh', display: 'flex', alignItems: 'center', color: '#fff' }}>
         <div className="container" style={{ textAlign: 'center' }}>
           <h1 style={{ fontSize: '3rem', marginBottom: '1rem', color: '#fff' }}>Our Services</h1>
-          <p style={{ fontSize: '1.2rem', maxWidth: '700px', margin: '0 auto' }}>From dream kitchens to complete home makeovers, we bring your vision to life with expert design and quality craftsmanship.</p>
+          <p style={{ fontSize: '1.2rem', maxWidth: '700px', margin: '0 auto', color: '#fdfcf0' }}>From dream kitchens to complete home makeovers, we bring your vision to life with expert design and quality craftsmanship.</p>
         </div>
       </div>
 
       {/* Main Services */}
       <div className="container" style={{ padding: '5rem 0' }}>
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          <h2 style={{ color: '#800000', marginBottom: '1rem' }}>Our Expertise</h2>
+          <h2 style={{ color: '#800000', marginBottom: '1rem', marginTop: '1rem' }}>Our Expertise</h2>
           <p style={{ fontSize: '1.1rem', color: '#666' }}>Comprehensive solutions for all your interior design needs</p>
         </div>
         <div className="services-main-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '3rem' }}>
@@ -277,7 +278,7 @@ function Services() {
                   style={{ width: '100%', padding: '1rem 2rem', background: '#800000', color: '#fff', border: 'none', borderRadius: '8px', fontSize: '1rem', fontWeight: '500', cursor: 'pointer', transition: 'background 0.3s ease' }}
                 >
                   Request Quote
-                </button>
+        </button>
               </div>
             </div>
           ))}
@@ -465,7 +466,7 @@ function Projects() {
       <div style={{ background: 'linear-gradient(135deg, rgba(128, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1920")', backgroundSize: 'cover', backgroundPosition: 'center', height: '60vh', display: 'flex', alignItems: 'center', color: '#fff' }}>
         <div className="container" style={{ textAlign: 'center' }}>
           <h1 style={{ fontSize: '3rem', marginBottom: '1rem', color: '#fff' }}>Our Projects</h1>
-          <p style={{ fontSize: '1.2rem', maxWidth: '700px', margin: '0 auto' }}>Explore our portfolio of stunning interior design and kitchen setup projects that showcase our expertise and attention to detail.</p>
+          <p style={{ fontSize: '1.2rem', maxWidth: '700px', margin: '0 auto', color: '#fdfcf0' }}>Explore our portfolio of stunning interior design and kitchen setup projects that showcase our expertise and attention to detail.</p>
         </div>
       </div>
 
@@ -474,7 +475,7 @@ function Projects() {
         {/* Controls */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2rem', gap: '2rem', flexWrap: 'wrap' }}>
           <div>
-            <h2 style={{ color: '#800000', marginBottom: '0.5rem' }}>Our Work</h2>
+            <h2 style={{ color: '#800000', marginBottom: '0.5rem', marginTop: '1rem' }}>Our Work</h2>
             <p style={{ color: '#666', margin: '0' }}>Showing {filteredProjects.length} projects</p>
           </div>
           
@@ -691,6 +692,7 @@ function Contact() {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <Header />
         <main>

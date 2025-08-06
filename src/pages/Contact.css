@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
+  margin-top: 70px; /* Add margin to account for fixed header */
 }
 
 .contact-hero__background {
@@ -42,6 +43,8 @@
   text-align: center;
   max-width: 700px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2; /* Ensure content stays above background */
 }
 
 .contact-hero__content h1 {
@@ -393,6 +396,11 @@
     max-width: 90% !important;
   }
   
+  /* Ensure Contact hero has proper spacing on tablet */
+  .contact-hero {
+    margin-top: 80px; /* More margin for tablets */
+  }
+  
   /* Contact sections tablet spacing */
   .contact-main,
   .contact-cta {
@@ -425,6 +433,7 @@
   .contact-hero {
     height: 50vh;
     min-height: 300px;
+    margin-top: 60px; /* Smaller margin for mobile to match body padding */
   }
   
   .contact-main {

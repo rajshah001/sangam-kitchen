@@ -28,15 +28,28 @@
 @media (max-width: 768px) {
   .header__content {
     justify-content: space-between;
+    padding: 0.75rem 0; /* Reduce padding on mobile */
+    position: relative;
   }
   
   .header__menu-toggle {
-    margin-left: auto;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
     order: 2;
+    z-index: 1001; /* Ensure hamburger stays above other elements */
   }
   
   .header__logo {
     order: 1;
+    flex: 1;
+  }
+  
+  /* Hide CTA button on smaller screens to prevent overlap */
+  .header__cta {
+    display: none;
   }
 }
 
@@ -116,6 +129,15 @@
   align-items: center;
   justify-content: center;
   transition: color var(--transition-fast);
+}
+
+/* Mobile hamburger positioning */
+@media (max-width: 768px) {
+  .header__menu-toggle {
+    padding: 0.75rem 0 0.75rem 0.75rem; /* Remove right padding, keep others */
+    margin: 0; /* Remove all margins */
+    right: -8rem; /* Ensure it's flush with right edge */
+  }
 }
 
 .header__menu-toggle:hover {
@@ -205,6 +227,32 @@
 /* Body padding to account for fixed header */
 body {
   padding-top: 70px;
+}
+
+/* Tablet styles - handle overlap between nav and CTA button */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header__content {
+    gap: 1rem; /* Add gap between nav and CTA button */
+  }
+  
+  .header__nav-list {
+    gap: 1rem; /* Reduce gap between nav items */
+  }
+  
+  .header__cta {
+    flex-shrink: 0; /* Prevent CTA button from shrinking */
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+  .hidden-desktop {
+    display: none !important;
+  }
+
+  .hidden-mobile {
+    display: flex !important;
+  }
 }
 
 @media (max-width: 768px) {

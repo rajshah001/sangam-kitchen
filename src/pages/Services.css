@@ -48,13 +48,17 @@
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   margin-bottom: 1rem;
   color: var(--primary-white);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+  font-weight: 700;
 }
 
 .services-hero__content p {
   font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--primary-white);
   margin: 0;
   line-height: 1.6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-weight: 500;
 }
 
 /* Main Services */

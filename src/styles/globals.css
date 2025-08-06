@@ -720,3 +720,26 @@ img {
     display: none !important;
   }
 }
+
+/* Global h1 and h2 responsive top padding */
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  h1 {
+    padding-top: 1.5rem !important;
+  }
+  
+  h2 {
+    padding-top: 1.25rem !important;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  h1 {
+    padding-top: 1rem !important;
+  }
+  
+  h2 {
+    padding-top: 0.75rem !important;
+  }
+}
