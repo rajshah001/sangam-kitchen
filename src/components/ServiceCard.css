@@ -1,0 +1,214 @@
+.service-card {
+  background: var(--primary-white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-light);
+  overflow: hidden;
+  transition: all var(--transition-smooth);
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-heavy);
+}
+
+/* Image Section */
+.service-card__image {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.service-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.service-card:hover .service-card__image img {
+  transform: scale(1.05);
+}
+
+.service-card__icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--primary-maroon);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Content Section */
+.service-card__content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card__title {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.service-card__description {
+  color: var(--text-medium);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+/* Features List */
+.service-card__features {
+  list-style: none;
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+}
+
+.service-card__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-medium);
+}
+
+.service-card__feature:last-child {
+  margin-bottom: 0;
+}
+
+.service-card__feature-icon {
+  color: var(--primary-maroon);
+  font-weight: var(--font-weight-bold);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* CTA Section */
+.service-card__cta {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.service-card__button {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Card Variants */
+.service-card--featured {
+  border: 2px solid var(--primary-maroon);
+  position: relative;
+}
+
+.service-card--featured::before {
+  content: 'Popular';
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--primary-maroon);
+  color: var(--primary-white);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-medium);
+  z-index: 2;
+}
+
+.service-card--compact {
+  flex-direction: row;
+  height: auto;
+}
+
+.service-card--compact .service-card__image {
+  width: 200px;
+  height: 150px;
+  flex-shrink: 0;
+}
+
+.service-card--compact .service-card__content {
+  padding: 1rem;
+}
+
+.service-card--compact .service-card__title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.service-card--compact .service-card__button {
+  width: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-card__image {
+    height: 200px;
+  }
+  
+  .service-card__content {
+    padding: 1.25rem;
+  }
+  
+  .service-card__title {
+    font-size: 1.25rem;
+  }
+  
+  .service-card--compact {
+    flex-direction: column;
+  }
+  
+  .service-card--compact .service-card__image {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card__content {
+    padding: 1rem;
+  }
+  
+  .service-card__title {
+    font-size: 1.1rem;
+  }
+  
+  .service-card__feature {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation for features */
+.service-card__feature {
+  opacity: 0;
+  transform: translateX(-10px);
+  animation: slideInFeature 0.5s ease forwards;
+}
+
+.service-card__feature:nth-child(1) { animation-delay: 0.1s; }
+.service-card__feature:nth-child(2) { animation-delay: 0.2s; }
+.service-card__feature:nth-child(3) { animation-delay: 0.3s; }
+.service-card__feature:nth-child(4) { animation-delay: 0.4s; }
+.service-card__feature:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes slideInFeature {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
