@@ -26,7 +26,7 @@ function About() {
   ];
 
   const team = [
-    { name: 'Mr. Mangesh Gujrathi', role: 'Owner', experience: '20+ years', image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300' }
+    { name: 'Mr. Mangesh Gujrathi', role: 'Owner', experience: '20+ years', image: '/mangesh.jpeg' }
   ];
 
   return (
@@ -147,7 +147,7 @@ function About() {
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             {team.map((member, index) => (
               <div key={index} style={{ background: '#fff', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.1)', transition: 'transform 0.3s ease', maxWidth: '350px', width: '100%' }}>
-                <img src={member.image} alt={member.name} style={{ width: '100%', height: '250px', objectFit: 'cover' }} />
+                <img src={member.image} alt={member.name} style={{ width: '100%', height: '250px', objectFit: 'cover', objectPosition: 'center 20%' }} />
                 <div style={{ padding: '2rem', textAlign: 'center' }}>
                   <h3 style={{ color: '#333', marginBottom: '0.5rem' }}>{member.name}</h3>
                   <p style={{ color: '#800000', fontWeight: '500', marginBottom: '0.5rem' }}>{member.role}</p>
